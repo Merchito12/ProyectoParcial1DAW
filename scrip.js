@@ -1,4 +1,4 @@
-const menu=document.querySelectorAll(".menu");
+const menu=document.getElementById("menu");
 const eliminar=document.getElementById("elimina");
 const pantalla=document.getElementById("buy");
 
