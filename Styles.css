@@ -49,7 +49,7 @@ main
 {
     align-content: center;
 }
-#menu
+.btn
 {
     border-radius: 40px;
     border: none;
