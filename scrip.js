@@ -6,26 +6,25 @@ const pantalla=document.getElementById("buy");
 for(const producto  of productos)
 {
     producto.addEventListener('click',()=>{
-        console.log(producto);
-        const id=producto.id;
-        const precio=producto.querySelector('.Precio').innerText;
-        const nombre=producto.querySelector('.Nombre').innerHTML;
-        console.log(id);
-        console.log(precio);
+
+        const precioEm=producto.querySelector('.Precio').innerText;
+        const nombreEm=producto.querySelector('.Nombre').innerHTML;
+    
         let imagen=document.createElement("img");//creamos un nuevo elemento tipo imagen
         //y ese elemento imagen sera la imagen del boton
         imagen.src=producto.querySelector('img').src;//obtenemos el src del archivo html
         imagen.alt=producto.querySelector('img').alt;//obtneemos el alt del html
 
-       
+        // Crear elementos para mostrar el nombre y el precio en la sección
+        let precio=document.createElement('p');
+        precio.textContent=precioEm;//obtennemos el valor del precio
 
-        
+        let nombre=document.createElement('p');
+        nombre.textContent=nombreEm;
 
         pantalla.appendChild(imagen);//agregamos a mi section los elementos
-        pantalla.appendChild(id);
+        pantalla.appendChild(nombre);
         pantalla.appendChild(precio);
-        
-
 
     })
 }  
