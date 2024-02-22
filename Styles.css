@@ -1,116 +1,178 @@
-*
-{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-body
-{
-
-    min-height: 100vh;
-    background-color: white;
-    margin-left: 0; 
+    font-size: 1.3rem;
 }
 
-header
-{
+body {
+    background-color: rgb(56, 56, 125);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+aside {
+    padding: 2rem;
+    padding-right: 0;
+    text-align: center;
+    background-color: rgb(56, 56, 125);
+    position: sticky;
+    height: 100vh;
+
+    /* para dejar el aside quieto , asi baje la pantalla */
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: baseline;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-    background-color: #ff5733;
-    padding: 5px 20px;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+    /* Separa nav,header y footer */
+
 }
-ul
-{
-    display: flex;
+
+main {
+    background-color: rgb(255, 255, 255);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(56, 56, 125);
+}
+
+
+ul {
+
     gap: 2rem;
     padding-left: 0;
+    font-size: 5rem;
+
+}
+
+li {
     list-style: none;
 }
 
-
-.menues
-{
+.menu {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 50px;
-    width: 750px;
-    height: 450px;
-    margin-top: 15px;
-    
-    
-}
-.Contenido
-{
-    height: 0;
-}   
-article
-{
-    flex-grow: 1;
-    background-color: aqua;
-    width: 100%;
+    gap: 3rem;
+
+    font-size: 5rem;
+
 }
 
-.menues>span
-{
+.boton-tipo {
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+
+}
+
+.menues {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+    padding: 2rem;
+    width: auto;
+
+    height: auto;
+    margin-top: 15px;
+
+
+}
+
+.Contenido {
+    height: 0;
+}
+
+article {
+    text-align: center;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12rem;
+
+}
+
+article :hover {
+    background-color: rgb(130, 130, 214);
+    transition: all 1s;
+}
+
+.menues>span {
     align-content: center;
 }
 
-.btn
-{
-    border-radius: 40px;
-    border: none;
-    
-    gap: .5rem;
-    height: 170px;
-}
-#Precio
-{
-    color: orange;
-    
-}
-img
-{
-    height: 80px;
-    border-radius: 30px;
-    width: auto; 
-}
-aside
-{
-    float: right;/*trasladamos nuestro elemento al lado izquierdo de la pantalla*/
-    width: 410px;
-    height: 800px;
-    margin-top: 50px;
-    margin-left: 10px;
-    background-color: burlywood;
-    padding: 50px;
-    margin-right: 50px;
-    overflow: auto;
-
-}
-aside>section
-{
-    border: 2px solid red;
-    overflow: auto;
-
-}
-aside>label
-{
-    align-items: center;
-}
-aside>img
-{
-    height: 45px;
-}
-button
-{
+footer a {
+    color: aliceblue;
+    text-decoration: none;
     cursor: pointer;
+}
+
+
+img {
+    height: 160px;
+    border-radius: 30px;
+    width: auto;
+    min-height: 160PX;
+}
+
+.carrito {
+    background-color: rgb(115, 148, 169);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 800px;
+}
+
+#carrito {
+    width: 100px;
+
+    margin-left: 40%;
+}
+
+#buy button {
+    padding: 1rem;
+    border-radius: 12rem;
+    background-color: rgb(163, 35, 35);
+    width: auto;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 600px) {
+    *{
+        font-size: 1rem;
+    }
+    .menues {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    max-height: 50vh;
+    width: auto;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
