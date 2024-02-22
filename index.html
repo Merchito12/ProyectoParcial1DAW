@@ -10,55 +10,79 @@
     <header class="Productos">
         <h1>In bloom</h1>
 
-        <button id="produs">Todos</button>
-        <button id="produs">Entradas</button>
-        <button id="produs">Menu Principal</button>
-        <button id="produs">Jugos</button>
-        <button id="produs">Postres</button>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="#Entradas">Entradas</a></li>
+                <li><a href="#Menu_principal">Menu Principal</a></li>
+                <li><a href="#jugos">Jugos</a></li>
+                <li><a href="#postres">Postres</a></li>
+            </ul>
+        </nav>
 
+    </header>
+    
     <main class="Contenido">
-        <label for="">Selecciona</label>
+        
 
         <div class="menues">
-            <button class="btn" id="Nachos"> 
-                <img src=".vscode\images\244540.avif" alt="play button">
-                <span class="Nombre">Nachos</span>
-                <span class="Precio">$6.00</span>
-            </button>
+
+            <article id="Entradas">
+                <p>Entradas</p>
+                <button class="btn" id="Nachos"> 
+                    <img src=".vscode\images\244540.avif" alt="play button">
+                    <span class="Nombre">Nachos</span>
+                    <span class="Precio">$6.00</span>
+                </button>
+            </article>
+            
+            <article id="Menu_principal">
+                <p>Menu Principal</p>
+                <button class="btn"> 
+                    <img src=".vscode\images\churrasco-con-chimichurri-grilled-skirt-steak.jpg" alt="play button">
+                    <span class="Nombre">Churrasco</span>
+                    <span class="Precio">$20.99</span>
+                </button>
+            </article>
+            
+            <article id="jugos">
+                <p>Jugos</p>
+                <button class="btn"> 
+                    <img src=".vscode\images\como_hacer_jugo_de_guanabana_28833_600_square.jpg" alt="play button">
+                    <span class="Nombre">Jugo de guanabana</span>
+                    <span class="Precio">$8.00</span>
+                </button>
+
+                <button class="btn"> 
+                    <img src=".vscode\images\como_hacer_jugo_de_fresa_28828_orig.jpg" alt="play button">
+                    <span class="Nombre">Jugo de fresa</span>
+                    <span class="Precio">$7.85</span>
+                </button>
+            </article>
+            
+            <article id="postres">
+                <P>Postres</P>
+                <button class="btn"> 
+                    <img src=".vscode\images\f.elconfidencial.com_original_765_a65_950_765a65950e584b764e05266f111b2a86.jpg" alt="play button">
+                    <span class="Nombre">Helado</span>
+                    <span class="Precio">$10.00</span>
+                </button>
+            </article>
+            
+            
     
-            <button class="btn"> 
-                <img src=".vscode\images\churrasco-con-chimichurri-grilled-skirt-steak.jpg" alt="play button">
-                <span class="Nombre">Churrasco</span>
-                <span class="Precio">$20.99</span>
-            </button>
-    
-            <button class="btn"> 
-                <img src=".vscode\images\como_hacer_jugo_de_guanabana_28833_600_square.jpg" alt="play button">
-                <span class="Nombre">Jugo de guanabana</span>
-                <span class="Precio">$8.00</span>
-            </button>
-    
-            <button class="btn"> 
-                <img src=".vscode\images\como_hacer_jugo_de_fresa_28828_orig.jpg" alt="play button">
-                <span class="Nombre">Jugo de fresa</span>
-                <span class="Precio">$7.85</span>
-            </button>
-    
-            <button class="btn"> 
-                <img src=".vscode\images\f.elconfidencial.com_original_765_a65_950_765a65950e584b764e05266f111b2a86.jpg" alt="play button">
-                <span class="Nombre">Helado</span>
-                <span class="Precio">$10.00</span>
-            </button>
+            
         </div>
     </main>
 
     <aside class="Carrito">
-        <img src="" alt="">
-        <label for="">precio</label>
+        <img src=".vscode\images\458047a868d6fe3d07874479889a1c46.png" alt="buyed">
         <section id="buy">
-            <button id="envia">Enviar</button>
+            
         </section>
+        <button id="envia">Enviar</button>
+        <br>
+        <span>Total:</span>
+        <section id="result">0</section>
     </aside>
 
     <script src="scrip.js"></script>
