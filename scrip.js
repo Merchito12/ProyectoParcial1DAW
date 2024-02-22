@@ -2,6 +2,7 @@ const productos = document.querySelectorAll(".btn");//cojemos la clase
 const pantalla = document.getElementById("buy");
 const resultado = document.getElementById("result");
 const envia = document.getElementById("envia");
+const elementos=[];
 
 for (const producto of productos) {
     producto.addEventListener('click', () => {
@@ -42,6 +43,8 @@ for (const producto of productos) {
         total += parseFloat(preci);//sumamos
         resultado.textContent = total.toFixed(2);//agregamos dos decimales
 
+        elementos.push(nombreEm);
+        elementos.push(precioEm);
 
         elimina.addEventListener('click', () => {
             pantalla.removeChild(imagen);
@@ -61,6 +64,13 @@ for (const producto of productos) {
 envia.addEventListener("click",()=>{
     if(pantalla.querySelector('*')!==null)
     {
+        const url=encodeURIComponent(JSON.stringify(elementos));
+        window.history.pushState({},'','?productos=',url);
+        pantalla.removeChild(imagen);
+        pantalla.removeChild(nombre);
+        pantalla.removeChild(precio);
+        pantalla.removeChild(elimina);
+        resultado.textContent='';
         alert("ENVIADO EFECTIVAMENTE");
         
     }

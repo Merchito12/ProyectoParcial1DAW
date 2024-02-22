@@ -168,11 +168,17 @@ img {
         display: flex;
         flex-direction: column;
         overflow: auto;
-    max-height: 50vh;
+    max-height: 100vh;
     width: auto;
     }
     .contenedor{
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+    img {
+        height: 20px;
+        border-radius: 30px;
+        width: 60px;
+        min-height: 60PX;
     }
 }
